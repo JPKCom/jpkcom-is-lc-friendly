@@ -1,0 +1,26 @@
+<ol type="1">
+<li>In your admin panel, go to ‘Plugins’ &gt; and click the ‘Add New’
+button.</li>
+<li>Click Upload Plugin and ‘Choose File’, then select the Plugin’s .zip
+file. Click ‘Install Now’.</li>
+<li>Make sure ‘LiveCanvas’ plugin is activated.</li>
+<li>Click ‘Activate’ to use the plugin right away.</li>
+<li>Create a subdirectory called <code>page-templates</code> in your
+theme folder.</li>
+<li>In this folder, create a file called <code>empty.php</code> with the
+following code:</li>
+</ol>
+<pre><code>&lt;?php
+/* Template Name: Empty */
+
+defined( &#39;ABSPATH&#39; ) || exit;
+
+get_header();
+
+while ( have_posts() ) :
+the_post();
+the_content();
+endwhile;
+
+get_footer();
+</code></pre>

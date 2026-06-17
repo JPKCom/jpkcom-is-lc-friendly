@@ -1,0 +1,48 @@
+{
+  "name": "JPKCom Theme is LiveCanvas friendly",
+  "display_name": "JPKCom Theme is LiveCanvas friendly",
+  "slug": "jpkcom-is-lc-friendly",
+  "version": "1.0.4",
+  "download_url": "https://github.com/JPKCom/jpkcom-is-lc-friendly/releases/download/v1.0.4/jpkcom-is-lc-friendly.zip",
+  "checksum_sha256": "7dab3e7b1eebc2e4eb89e55b04da21f2028963fe08aa0929419ee2ee0c96cb3c",
+  "requires": "6.9",
+  "tested": "7.0",
+  "requires_php": "8.3",
+  "author": "Jean Pierre Kolb <jpk@jpkc.com>",
+  "author_profile": "https://www.jpkc.com",
+  "contributors": {
+    "JPKCom": {
+      "profile": "https://profiles.wordpress.org/JPKCom",
+      "avatar": "https://wordpress.org/grav-redirect.php?user=JPKCom&s=36"
+    }
+  },
+  "tags": [
+    "LiveCanvas",
+    "Bootstrap",
+    "Theme"
+  ],
+  "license": "GPL-2.0-or-later",
+  "license_uri": "https://www.gnu.org/licenses/gpl-2.0.html",
+  "text_domain": "",
+  "domain_path": "/languages",
+  "network": true,
+  "requires_plugins": [
+    "livecanvas"
+  ],
+  "homepage": "https://github.com/JPKCom/jpkcom-is-lc-friendly",
+  "last_updated": "2026-06-17",
+  "sections": {
+    "description": "<p>Adds the following features:</p>\n<pre><code>function lc_theme_is_livecanvas_friendly(){}</code></pre>\n<pre><code>function lc_theme_bootstrap_version() {\n    return 5.3; //for latest Bootstrap, or\n    //return 5; //for   Bootstrap 5.0 .. 5.2 , or\n    //return 4;  //for   Bootstrap 4 \n}</code></pre>\n<p>For more details visit:\nhttps://docs.livecanvas.com/which-themes-with-livecanvas/</p>\n<h3 id=\"documentation\">Documentation</h3>\n<p><strong>API Documentation:</strong> Complete PHPDoc-generated API\ndocumentation is available at: <a\nhref=\"https://jpkcom.github.io/jpkcom-is-lc-friendly/docs/\">https://jpkcom.github.io/jpkcom-is-lc-friendly/docs/</a></p>\n",
+    "installation": "<ol type=\"1\">\n<li>In your admin panel, go to ‘Plugins’ &gt; and click the ‘Add New’\nbutton.</li>\n<li>Click Upload Plugin and ‘Choose File’, then select the Plugin’s .zip\nfile. Click ‘Install Now’.</li>\n<li>Make sure ‘LiveCanvas’ plugin is activated.</li>\n<li>Click ‘Activate’ to use the plugin right away.</li>\n<li>Create a subdirectory called <code>page-templates</code> in your\ntheme folder.</li>\n<li>In this folder, create a file called <code>empty.php</code> with the\nfollowing code:</li>\n</ol>\n<pre><code>&lt;?php\n/* Template Name: Empty */\n\ndefined( &#39;ABSPATH&#39; ) || exit;\n\nget_header();\n\nwhile ( have_posts() ) :\nthe_post();\nthe_content();\nendwhile;\n\nget_footer();\n</code></pre>\n",
+    "changelog": "<h3 id=\"section\">1.0.4</h3>\n<ul>\n<li>Added secure self-hosted plugin updates via GitHub with SHA256\nchecksum verification</li>\n<li>Added an automated release workflow (builds the ZIP, generates the\nmanifest and deploys to gh-pages on tag push)</li>\n<li>Raised the minimum WordPress version to 6.9 and “Tested up to” to\nWordPress 7.0</li>\n<li>Switched license metadata to the SPDX identifier\n<code>GPL-2.0-or-later</code> with the HTTPS license URI</li>\n<li>Added PHPDoc-generated API documentation, built and deployed to\ngh-pages on release</li>\n<li>Hardening: enabled <code>declare(strict_types=1)</code> and guarded\nthe LiveCanvas helper functions with <code>function_exists()</code></li>\n</ul>\n<h3 id=\"section-1\">1.0.3</h3>\n<ul>\n<li>Tested up to WP v6.8</li>\n</ul>\n<h3 id=\"section-2\">1.0.2</h3>\n<ul>\n<li>Updated README.md</li>\n</ul>\n<h3 id=\"section-3\">1.0.1</h3>\n<ul>\n<li>Updated README.md</li>\n</ul>\n<h3 id=\"section-4\">1.0.0</h3>\n<ul>\n<li>Initial Release</li>\n</ul>\n",
+    "faq": "\n"
+  },
+  "readme_html": "<h1 id=\"jpkcom-theme-is-livecanvas-friendly\">JPKCom Theme is LiveCanvas\nfriendly</h1>\n<p><strong>Plugin Name:</strong> JPKCom Theme is LiveCanvas\nfriendly<br />\n<strong>Plugin URI:</strong>\nhttps://github.com/JPKCom/jpkcom-is-lc-friendly<br />\n<strong>Description:</strong> Enables\nlc_theme_is_livecanvas_friendly().<br />\n<strong>Version:</strong> 1.0.4<br />\n<strong>Author:</strong> Jean Pierre Kolb <a href=\"mailto:jpk@jpkc.com\"\nclass=\"email\">jpk@jpkc.com</a><br />\n<strong>Author URI:</strong> https://www.jpkc.com<br />\n<strong>Contributors:</strong> JPKCom<br />\n<strong>Tags:</strong> LiveCanvas, Bootstrap, Theme<br />\n<strong>Requires Plugins:</strong> livecanvas<br />\n<strong>Requires at least:</strong> 6.9<br />\n<strong>Tested up to:</strong> 7.0<br />\n<strong>Requires PHP:</strong> 8.3<br />\n<strong>Stable tag:</strong> 1.0.4<br />\n<strong>License:</strong> GPL-2.0-or-later<br />\n<strong>License URI:</strong>\nhttps://www.gnu.org/licenses/gpl-2.0.html</p>\n<p>Enables lc_theme_is_livecanvas_friendly().</p>\n<h2 id=\"description\">Description</h2>\n<p>Adds the following features:</p>\n<pre><code>function lc_theme_is_livecanvas_friendly(){}</code></pre>\n<pre><code>function lc_theme_bootstrap_version() {\n    return 5.3; //for latest Bootstrap, or\n    //return 5; //for   Bootstrap 5.0 .. 5.2 , or\n    //return 4;  //for   Bootstrap 4 \n}</code></pre>\n<p>For more details visit:\nhttps://docs.livecanvas.com/which-themes-with-livecanvas/</p>\n<h3 id=\"documentation\">Documentation</h3>\n<p><strong>API Documentation:</strong> Complete PHPDoc-generated API\ndocumentation is available at: <a\nhref=\"https://jpkcom.github.io/jpkcom-is-lc-friendly/docs/\">https://jpkcom.github.io/jpkcom-is-lc-friendly/docs/</a></p>\n<h2 id=\"installation\">Installation</h2>\n<ol type=\"1\">\n<li>In your admin panel, go to ‘Plugins’ &gt; and click the ‘Add New’\nbutton.</li>\n<li>Click Upload Plugin and ‘Choose File’, then select the Plugin’s .zip\nfile. Click ‘Install Now’.</li>\n<li>Make sure ‘LiveCanvas’ plugin is activated.</li>\n<li>Click ‘Activate’ to use the plugin right away.</li>\n<li>Create a subdirectory called <code>page-templates</code> in your\ntheme folder.</li>\n<li>In this folder, create a file called <code>empty.php</code> with the\nfollowing code:</li>\n</ol>\n<pre><code>&lt;?php\n/* Template Name: Empty */\n\ndefined( &#39;ABSPATH&#39; ) || exit;\n\nget_header();\n\nwhile ( have_posts() ) :\nthe_post();\nthe_content();\nendwhile;\n\nget_footer();\n</code></pre>\n<h2 id=\"changelog\">Changelog</h2>\n<h3 id=\"section\">1.0.4</h3>\n<ul>\n<li>Added secure self-hosted plugin updates via GitHub with SHA256\nchecksum verification</li>\n<li>Added an automated release workflow (builds the ZIP, generates the\nmanifest and deploys to gh-pages on tag push)</li>\n<li>Raised the minimum WordPress version to 6.9 and “Tested up to” to\nWordPress 7.0</li>\n<li>Switched license metadata to the SPDX identifier\n<code>GPL-2.0-or-later</code> with the HTTPS license URI</li>\n<li>Added PHPDoc-generated API documentation, built and deployed to\ngh-pages on release</li>\n<li>Hardening: enabled <code>declare(strict_types=1)</code> and guarded\nthe LiveCanvas helper functions with <code>function_exists()</code></li>\n</ul>\n<h3 id=\"section-1\">1.0.3</h3>\n<ul>\n<li>Tested up to WP v6.8</li>\n</ul>\n<h3 id=\"section-2\">1.0.2</h3>\n<ul>\n<li>Updated README.md</li>\n</ul>\n<h3 id=\"section-3\">1.0.1</h3>\n<ul>\n<li>Updated README.md</li>\n</ul>\n<h3 id=\"section-4\">1.0.0</h3>\n<ul>\n<li>Initial Release</li>\n</ul>\n",
+  "banners": {
+    "low": "https://jpkcom.github.io/jpkcom-is-lc-friendly/assets/banner-772x250.avif",
+    "high": "https://jpkcom.github.io/jpkcom-is-lc-friendly/assets/banner-1544x500.avif"
+  },
+  "icons": {
+    "default": "https://s.w.org/plugins/geopattern-icon/jpkcom-is-lc-friendly.svg"
+  }
+}
