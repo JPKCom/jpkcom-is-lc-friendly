@@ -6,7 +6,7 @@ friendly<br />
 https://github.com/JPKCom/jpkcom-is-lc-friendly<br />
 <strong>Description:</strong> Enables
 lc_theme_is_livecanvas_friendly().<br />
-<strong>Version:</strong> 1.0.4<br />
+<strong>Version:</strong> 1.0.5<br />
 <strong>Author:</strong> Jean Pierre Kolb <a href="mailto:jpk@jpkc.com"
 class="email">jpk@jpkc.com</a><br />
 <strong>Author URI:</strong> https://www.jpkc.com<br />
@@ -16,7 +16,7 @@ class="email">jpk@jpkc.com</a><br />
 <strong>Requires at least:</strong> 6.9<br />
 <strong>Tested up to:</strong> 7.0<br />
 <strong>Requires PHP:</strong> 8.3<br />
-<strong>Stable tag:</strong> 1.0.4<br />
+<strong>Stable tag:</strong> 1.0.5<br />
 <strong>License:</strong> GPL-2.0-or-later<br />
 <strong>License URI:</strong>
 https://www.gnu.org/licenses/gpl-2.0.html</p>
@@ -63,7 +63,32 @@ endwhile;
 get_footer();
 </code></pre>
 <h2 id="changelog">Changelog</h2>
-<h3 id="section">1.0.4</h3>
+<h3 id="section">1.0.5</h3>
+<ul>
+<li>Security: update packages are now verified <em>before</em>
+installation — the verified file is handed to WordPress instead of being
+downloaded a second time, so the bytes that were checked are the bytes
+that get installed</li>
+<li>Security: a missing or unfetchable SHA-256 checksum now aborts the
+update instead of installing unverified code (previously it silently
+skipped verification)</li>
+<li>Security: pinned every GitHub Action to a full commit SHA and added
+Dependabot with a 7-day cooldown, so a moved tag can no longer change
+the release build</li>
+<li>Security: tightened which download the updater claims, so sibling
+plugins cannot match each other’s package</li>
+<li>Fixed: <code>sprintf()</code> calls in the updater bound named
+arguments to a variadic parameter, which raises
+<code>ArgumentCountError</code> on PHP 8.3</li>
+<li>Fixed: the “View Details” modal could fail with a
+<code>TypeError</code> when the manifest omitted
+<code>requires_plugins</code></li>
+<li>Performance: a failed manifest fetch is now cached for an hour
+instead of being retried on every admin request</li>
+<li>Added: CI workflow on every pull request (PHP lint, named-argument
+check, YAML validation, action-pinning guard)</li>
+</ul>
+<h3 id="section-1">1.0.4</h3>
 <ul>
 <li>Added secure self-hosted plugin updates via GitHub with SHA256
 checksum verification</li>
@@ -78,19 +103,19 @@ gh-pages on release</li>
 <li>Hardening: enabled <code>declare(strict_types=1)</code> and guarded
 the LiveCanvas helper functions with <code>function_exists()</code></li>
 </ul>
-<h3 id="section-1">1.0.3</h3>
+<h3 id="section-2">1.0.3</h3>
 <ul>
 <li>Tested up to WP v6.8</li>
 </ul>
-<h3 id="section-2">1.0.2</h3>
+<h3 id="section-3">1.0.2</h3>
 <ul>
 <li>Updated README.md</li>
 </ul>
-<h3 id="section-3">1.0.1</h3>
+<h3 id="section-4">1.0.1</h3>
 <ul>
 <li>Updated README.md</li>
 </ul>
-<h3 id="section-4">1.0.0</h3>
+<h3 id="section-5">1.0.0</h3>
 <ul>
 <li>Initial Release</li>
 </ul>
