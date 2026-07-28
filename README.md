@@ -3,7 +3,7 @@
 **Plugin Name:** JPKCom Theme is LiveCanvas friendly  
 **Plugin URI:** https://github.com/JPKCom/jpkcom-is-lc-friendly  
 **Description:** Enables lc_theme_is_livecanvas_friendly().  
-**Version:** 1.0.6  
+**Version:** 1.0.7  
 **Author:** Jean Pierre Kolb <jpk@jpkc.com>  
 **Author URI:** https://www.jpkc.com  
 **Contributors:** JPKCom  
@@ -12,7 +12,7 @@
 **Requires at least:** 6.9  
 **Tested up to:** 7.0  
 **Requires PHP:** 8.3  
-**Stable tag:** 1.0.6  
+**Stable tag:** 1.0.7  
 **License:** GPL-2.0-or-later  
 **License URI:** https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -72,6 +72,9 @@ get_footer();
 
 
 ## Changelog
+
+### 1.0.7
+* Added: plugin banners (`assets/banner-1544x500.avif`, `assets/banner-772x250.avif`) — a plain `#3c4955` surface with no lettering. The update manifest already advertised these two URLs, but nothing was published under them, so the plugin card in wp-admin had a broken banner
 
 ### 1.0.6
 * CI: the release step no longer copies the staging directory into itself, so the ZIP has no empty `jpkcom-is-lc-friendly/jpkcom-is-lc-friendly/` folder
