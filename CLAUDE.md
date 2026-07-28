@@ -40,7 +40,7 @@ These are LiveCanvas API-contract function names (not `jpkcom_`-prefixed) and mu
 
 | Constant | Value | Purpose |
 |----------|-------|---------|
-| `JPKCOM_IS_LC_FRIENDLY_VERSION` | `'1.0.5'` | Plugin version (sync with header/README/phpdoc.xml) |
+| `JPKCOM_IS_LC_FRIENDLY_VERSION` | `'1.0.6'` | Plugin version (sync with header/README/phpdoc.xml) |
 
 ---
 
