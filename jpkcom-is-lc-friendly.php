@@ -3,7 +3,7 @@
 Plugin Name: JPKCom Theme is LiveCanvas friendly
 Plugin URI: https://github.com/JPKCom/jpkcom-is-lc-friendly
 Description: Enables lc_theme_is_livecanvas_friendly().
-Version: 1.0.9
+Version: 1.0.10
 Author: Jean Pierre Kolb <jpk@jpkc.com>
 Author URI: https://www.jpkc.com
 Contributors: JPKCom
@@ -12,9 +12,10 @@ Requires Plugins: livecanvas
 Requires at least: 6.9
 Tested up to: 7.1
 Requires PHP: 8.3
-Stable tag: 1.0.9
+Stable tag: 1.0.10
 License: GPL-2.0-or-later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
+Update URI: https://github.com/JPKCom/jpkcom-is-lc-friendly
 */
 
 declare(strict_types=1);
@@ -30,7 +31,7 @@ if ( ! defined( constant_name: 'WPINC' ) ) {
  * @since 1.0.4
  */
 if ( ! defined( 'JPKCOM_IS_LC_FRIENDLY_VERSION' ) ) {
-    define( 'JPKCOM_IS_LC_FRIENDLY_VERSION', '1.0.9' );
+    define( 'JPKCOM_IS_LC_FRIENDLY_VERSION', '1.0.10' );
 }
 
 
